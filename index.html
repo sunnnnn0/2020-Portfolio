@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Vewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|GFS+Didot&display=swap" rel="stylesheet">
+        <!-- script -->
+        <script src="./js/jquery.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" href="portfolio.css">
+    </head>   
+    <script>
+        $(function(){
+            $(".nav__link").click(function(e){
+                e.preventDefault();
+                var index = $(".nav__link").index(this);
+                if(index == 0) {
+                    $("html,body").animate({
+                        "scrollTop": "0px"
+                    });
+                } else {
+                    var os = $(".fullpage").eq(index + 1).offset();
+                    console.log(os.top);
+                    $("html,body").animate({
+                        "scrollTop": os.top
+                    });
+                }
+            });
+        });
+    
+    </script>
+    <body>
+        <div class="grid">
+            <div class="grid__container">
+                <span class="grid__line"></span>
+                <span class="grid__line"></span>
+                <span class="grid__line"></span>
+            </div>
+        </div>
+        <header class="mobile__header">
+            <a href="#" class="m__header--logo">OH SEON YEONG</a>
+            <!-- <a href="#" class="m__header--menu">
+                <i class="material-icons">menu</i>
+            </a> -->
+        </header>
+        <header class="desktop__header__wrap fullpage">
+            <div class="desktop__header">
+                <a href="#" class="d__header--logo">OH SEON YEONG</a>
+                <div class="d__header--nav">
+                    <a href="#" class="nav__link">HOME</a>
+                    <a href="#" class="nav__link">ABOUT</a>
+                    <a href="#" class="nav__link">PORTFOLIO</a>
+                </div>
+            </div>
+        </header> 
+        <div class="banner__wrap fullpage">
+            <div class="banner">
+                <div class="banner__texts">
+                    <div class="banner__text">WEB PUBLISHING<br>PORTFOLIO.</div>
+                    <a href="./portfolio.pdf" class="banner__btn">PDF바로가기</a> 
+                </div>
+            </div>
+        </div>  
+        <div class="about fullpage">
+            <h1 class="title">ABOUT</h1>
+            <div class="wrap">
+                <div class="profile">
+                    <h1 class="sub">PROFILE</h1>
+                    <ul class="profile__title">
+                        <li class="profile__list">NAME<br><br></li>
+                        <li class="profile__list">AGE</li>
+                        <li class="profile__list">PHONE</li>
+                        <li class="profile__list">E-MAIL</li>
+                    </ul>
+                    <ul class="profile__content">
+                        <li class="profile__list">오선영<br>OH SEON YEONG</li>
+                        <li class="profile__list">1995. 03. 04</li>
+                        <li class="profile__list">010 2066 9524</li>
+                        <li class="profile__list">tjsdud572@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h1 class="sub">SKILL</h1>
+                    <ul class="skill__content">
+                        <li>
+                            <img src="./img/icon-html.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/icon-css.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/icon-js.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/icon-brackets.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/icon-vscode.jpeg" alt="">
+                        </li>
+                        <br><br><br><br>
+                        <li>
+                            <img src="./img/icon-xd.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/icon-figma.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/icon-photoshop.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/icon-illustrator.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/icon-zeplin.png" alt="">
+                        </li>
+                    </ul>            
+                </div>
+                <div class="education">
+                    <h1 class="sub">EDUCATION & WORK</h1>
+                    <ul class="edu__content">
+                        <li>
+                            <p class="edu">한국폴리텍대학(서울강서캠퍼스)<br>패션산업과 전공</p>
+                            <p class="edu__day">2015. 03 ~ 2017. 02</p>
+                        </li>
+                        <li>
+                            <p class="edu">KG패션 (주)<br>홈페이지관리 및 CS업무</p>
+                            <p class="edu__day">2017. 04 ~ 2018. 04</p>
+                        </li>
+                        <li>
+                            <p class="edu">서울중부기술교육원<br>디지털 웹디자인 과정 수료</p>
+                            <p class="edu__day">2018. 09 ~ 2019. 02</p>
+                        </li>
+                        <li>
+                            <p class="edu">리메인<br>웹프로페셔널 과정 수료</p>
+                            <p class="edu__day">2019. 04 ~ 2019. 11</p>
+                        </li> 
+                    </ul>            
+                </div>
+            </div>
+        </div>
+        <div class="portporio fullpage">
+            <h1 class="title">PORTFOLIO</h1>
+            <div class="work">
+                <div class="num__wrap">
+                    <div class="num">
+                        <div class="box"></div>
+                        <p class="num__text">01</p>
+                    </div>
+                </div>
+                <p class="work__title">UI DESIGN / Responsive Site </p>
+                <p class="work__content">반응형 웹으로 구현하여 다양한 디바이스에서의 접근성을 높여 리디자인 했습니다.</p>
+                <div class="work__img--wrap">
+                    <div class="work__img">
+                        <a href="./hdec/index.html"><img src="./img/hdec_img.png" alt="이미지"></a>
+                    </div>
+                    <p class="content__title">‘HYUNDAI E&C’</p>
+                    <div class="page">
+                        <ul>
+                            <li><a href="./hdec/index.html">INDEX PAGE</a></li>
+                            <li><a href="./hdec/FAQ.html">FAQ PAGE</a></li>
+                            <li><a href="./hdec/notice.html">NOTICE PAGE</a></li>
+                            <li><a href="./hdec/notice_detail.html">NOTICE DETAIL PAGE</a></li>
+                            <li><a href="./hdec/about.html">ABOUT PAGE</a></li>
+                            <li><a href="./hdec/history.html">HISTORY PAGE</a></li>
+                        </ul>
+                    </div>   
+                </div>
+            </div>
+            <div class="work">
+                <div class="num__wrap">
+                    <div class="num">
+                        <div class="box"></div>
+                        <p class="num__text">02</p>
+                    </div>
+                </div>
+                <p class="work__title">UI DESIGN / Desktop + Mobile  </p>
+                <p class="work__content">기존의 가지고 있던 브랜드만의 감성을 살리고 데스크탑과 모바일 버전으로 웹사이트를 리디자인 했습니다.</p>
+                <div class="work__img">
+                    <a href="./drmartens/index.html"><img src="./img/drmartents_img.png" alt="이미지"></a>
+                </div>
+                <p class="content__title">‘Dr. Martents’</p>
+                <div class="page">
+                    <ul>
+                        <li><a href="./drmartens/index.html">INDEX PAGE</a></li>
+                        <li><a href="./drmartens/Drmartens_detail.html">DETAIL PAGE</a></li>
+                        <li><a href="./drmartens/Drmartens_list.html">LIST PAGE</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="work">
+                <div class="num__wrap">
+                    <div class="num">
+                        <div class="box"></div>
+                        <p class="num__text">03</p>
+                    </div>
+                </div>
+                <p class="work__title">UI DESIGN / Responsive Site</p>
+                <p class="work__content">반응형 웹으로 구현하여 다양한 디바이스에서의 접근성을 높여 리디자인 했습니다.</p>
+                <div class="work__img">
+                    <a href="./paradisecity/index.html"><img src="./img/paradise_img.png" alt="이미지"></a>
+                </div>
+                <p class="content__title">‘PARADISE CITY’</p>
+                <div class="page">
+                    <ul>
+                        <li><a href="./paradisecity/index.html">INDEX PAGE</a></li>
+                        <li><a href="./paradisecity/about-1.html">ABOUT PAGE</a></li>
+                        <li><a href="./paradisecity/rooms.html">ROOMS PAGE</a></li>
+                        <li><a href="./paradisecity/dining.html">DINING PAGE</a></li>
+                        <li><a href="./paradisecity/casino.html">CASINO PAGE</a></li>
+                        <li><a href="./paradisecity/art.html">ART PAGE</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="work">
+                <div class="num__wrap">
+                    <div class="num">
+                        <div class="box"></div>
+                        <p class="num__text">04</p>
+                    </div>
+                </div>
+                <p class="work__title"> Responsive Site </p>
+                <p class="work__content">반응형 웹으로 구현하여 다양한 디바이스에서의 접근성을 높여 작업 했습니다.</p>
+                <div class="work__img">
+                    <a href="./mega/index.html"><img src="./img/megabox_img.png" alt="이미지"></a>
+                </div>
+                <p class="content__title">‘MEGABOX’</p>
+                <div class="page">
+                    <ul>
+                        <li><a href="./mega/index.html">DESKTOP INDEX PAGE</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="work">
+                <div class="num__wrap">
+                    <div class="num">
+                        <div class="box"></div>
+                        <p class="num__text">05</p>
+                    </div>
+                </div>
+                <p class="work__title"> Responsive Site </p>
+                <p class="work__content"> 반응형 웹으로 구현하여 다양한 디바이스에서의 접근성을 높여 작업 했습니다.</p>
+                <div class="work__img">
+                    <a href="./responsive/index.html"><img src="./img/responsive_img.png" alt="이미지"></a>
+                </div>
+                <p class="content__title">‘RESPONSIVE’</p>
+                <div class="page">
+                    <ul>
+                        <li><a href="./responsive/index.html">DESKTOP INDEX PAGE</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="work">
+                <div class="num__wrap">
+                    <div class="num">
+                        <div class="box"></div>
+                        <p class="num__text">06</p>
+                    </div>
+                </div>
+                <p class="work__title"> Desktop </p>
+                <p class="work__content"> 웹표준에 알맞게 데스크탑으로 작업 했습니다. </p>
+                <div class="work__img">
+                    <a href="./web/index.html"><img src="./img/grey_img.png" alt=""></a>
+                </div>
+                <p class="content__title">‘WEB’</p>
+                <div class="page">
+                    <ul>
+                        <li><a href="./web/index.html">DESKTOP INDEX PAGE</a></li>
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <p class="footer__text">COPYRIGHTⓒ OH SEON YEONG ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+	</body>
+</html>
